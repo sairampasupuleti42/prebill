@@ -12,31 +12,34 @@ export interface IRoute {
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
-  navLinks: IRoute[] = [
-    {
-      title: "Products",
-      path: "",
-      disabled: true,
-      hidden: true,
-    },
-    {
-      title: "Invoices",
-      path: "",
-      disabled: true,
-      hidden: true,
-    },
-    {
-      title: "Recent",
-      path: "",
-      disabled: true,
-      hidden: true,
-    },
-    {
-      title: "Settings",
-      path: "",
-      disabled: false,
-      hidden: false,
-    }, 
-  ];
-  ngOnInit() {}
+  navLinks: IRoute[] = [];
+  displayMenu: boolean = true;
+  ngOnInit() {
+    this.navLinks = [
+      {
+        title: "Products",
+        path: "",
+        disabled: this.displayMenu,
+        hidden: true,
+      },
+      {
+        title: "Invoices",
+        path: "",
+        disabled: this.displayMenu,
+        hidden: true,
+      },
+      {
+        title: "Recent",
+        path: "",
+        disabled: this.displayMenu,
+        hidden: true,
+      },
+      {
+        title: "Settings",
+        path: "",
+        disabled: this.displayMenu,
+        hidden: false,
+      },
+    ];
+  }
 }

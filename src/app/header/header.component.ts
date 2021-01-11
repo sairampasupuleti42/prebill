@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
       path: "",
       disabled: false,
       hidden: false,
-    },
+    }, 
   ];
   ngOnInit() {}
 }

@@ -6,6 +6,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "site":"prebill"
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }

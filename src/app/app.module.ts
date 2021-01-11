@@ -26,13 +26,13 @@ import { AuthGuard } from "./gaurds/auth.guard";
     FormsModule,
     RouterModule.forRoot([
       {
-        path: "",
+        path: "create-invoice",
         component: CreateInvoiceComponent,
         canActivate: [AuthGuard],
       },
-      { path: "", redirectTo: "/sign-in", pathMatch: "full" },
-      { path: "sign-in", component: SignInComponent },
-      { path: "register-user", component: SignUpComponent },
+      { path: "", redirectTo: "/signin", pathMatch: "full" },
+      { path: "signin", component: SignInComponent },
+      { path: "signup", component: SignUpComponent },
       { path: "forgot-password", component: ForgotPasswordComponent },
       { path: "verify-email-address", component: SendVerifyEmailComponent },
     ]),
